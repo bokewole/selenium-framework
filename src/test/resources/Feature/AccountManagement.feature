@@ -10,7 +10,7 @@ Feature: Account Management
 
     Examples:
       | Firstname | Lastname | Email                  | Password | Confirmpassword |
-      | Brian      | Mike  | johnfrinado099@aol.com | Powjj23@ | Powjj23@        |
+      | Brian      | Mike  | johnfrinado077@aol.com | Powjj23@ | Powjj23@        |
 
 
   @LoginAccount
@@ -22,4 +22,4 @@ Feature: Account Management
 
     Examples:
       | Email                  | Password |
-      | johnfrinado099@aol.com | Powjj23@ |
+      | johnfrinado077@aol.com | Powjj23@ |
