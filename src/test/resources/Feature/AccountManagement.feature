@@ -10,7 +10,7 @@ Feature: Account Management
 
     Examples:
       | Firstname | Lastname | Email                  | Password | Confirmpassword |
-      | Brian      | Mike  | johnfrinado077@aol.com | Powjj23@ | Powjj23@        |
+      | Brian      | Mike  | johnfrinado070@aol.com | Powjj23@ | Powjj23@        |
 
 
   @LoginAccount
@@ -22,4 +22,16 @@ Feature: Account Management
 
     Examples:
       | Email                  | Password |
-      | johnfrinado077@aol.com | Powjj23@ |
+      | johnfrinado070@aol.com | Powjj23@ |
+
+
+  @DuplicateAccount
+  Scenario Outline: Create an using a Valid Email address
+    Given I am on create an account page
+    When I enter "<Firstname>" "<Lastname>" "<Email>" "<Password>" "<Confirmpassword>"
+    And I click on create an account
+    Then error message should be displayed that account already exist
+
+    Examples:
+      | Firstname | Lastname | Email                  | Password | Confirmpassword |
+      | Brian      | Mike  | johnfrinado070@aol.com | Powjj23@ | Powjj23@        |
