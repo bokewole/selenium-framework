@@ -35,3 +35,15 @@ Feature: Account Management
     Examples:
       | Firstname | Lastname | Email                  | Password | Confirmpassword |
       | Brian      | Mike  | johnfrinado070@aol.com | Powjj23@ | Powjj23@        |
+
+
+    @UnregisteredAccount
+    Scenario Outline: Login using  Email and Password
+      Given I am on login page
+      When I enter "<Email>" "<Password>"
+      And I click on sign in
+      Then My Account home is displayed
+
+      Examples:
+        | Email                  | Password |
+        | johnfrinado007@aol.com | Powjj23@ |

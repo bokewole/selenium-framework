@@ -77,8 +77,13 @@ public class AccountManagementSteps {
         String actualResult = driver.getTitle();
         Assert.assertEquals(expectedResult, actualResult);
     }
+
+    @Then("Error message should be displayed that  account does not exist")
+    public void errorMessageShouldBeDisplayedThatAccountDoesNotExist () {
+        String expectedResult = "Account does not exist";
+        String actualResult = driver.getTitle();
+        Assert.assertEquals(expectedResult, actualResult);
+    }
+
 }
-
-
-
 
