@@ -55,7 +55,7 @@ public class AccountManagementSteps {
         AccountLoginPagePO accountLoginPagePO = new AccountLoginPagePO(driver);
         accountLoginPagePO.enterEmail(Email);
         accountLoginPagePO.enterPassword(Password);
-
+        
     }
 
     @And("I click on sign in")
@@ -71,19 +71,18 @@ public class AccountManagementSteps {
         Assert.assertEquals(expectedResult, actualResult);
     }
 
-    @Then("error message should be displayed that account already exist")
+
+    @Then("Create an account page is displayed")
     public void errorMessageShouldBeDisplayedThatAccountAlreadyExist() {
-        String expectedResult = "Account already exist";
+        String expectedResult = "Create New Customer Account";
         String actualResult = driver.getTitle();
         Assert.assertEquals(expectedResult, actualResult);
     }
 
-    @Then("Error message should be displayed that  account does not exist")
-    public void errorMessageShouldBeDisplayedThatAccountDoesNotExist () {
-        String expectedResult = "Account does not exist";
+    @Then("My Account Login page is displayed ")
+    public void errorMessageShouldBeDisplayedThatAccountDoesNotExist() {
+        String expectedResult = "Customer Login";
         String actualResult = driver.getTitle();
         Assert.assertEquals(expectedResult, actualResult);
     }
-
 }
-
